@@ -17,16 +17,16 @@ public class Main {
         System.out.println(artem.toString());
         System.out.println("_________________Задание 2________________________________________________");
         // Задание 2
-        Car lada=new Car("Lada","Lada Grande",1.7f,"Желтый",2015,"Россия");
-        Car audi=new Car("Audi","Audi A8 50 L TDI quattro",3.0f,"Черный",2020,"Германия");
-        Car bmw=new Car("BMW","",0,"Черный",0,"");
-        Car kia=new Car("Kia","Kia Sportage 4",2.4f,"Красный",2018,"Южная корея");
-        Car hyundai=new Car("Hyundai","Hyundai Avante",1.6f,"Оранжевый",2016,"Южная корея");
+        Car lada=new Car("Lada","Lada Grande",1.7f,"Желтый",2015,"Россия", "автомат","седан", "a123aа124", 6,"летняя"  );
+        //Car audi=new Car("Audi","Audi A8 50 L TDI quattro",3.0f,"Черный",2020,"Германия");
+        //Car bmw=new Car("BMW","",0,"Черный",0,"");
+        //Car kia=new Car("Kia","Kia Sportage 4",2.4f,"Красный",2018,"Южная корея");
+        //Car hyundai=new Car("Hyundai","Hyundai Avante",1.6f,"Оранжевый",2016,"Южная корея");
 
         System.out.println(lada.toString());
-        System.out.println(audi.toString());
-        System.out.println(bmw.toString());
-        System.out.println(kia.toString());
-        System.out.println(hyundai.toString());
+        //System.out.println(audi.toString());
+        //System.out.println(bmw.toString());
+        //System.out.println(kia.toString());
+        //System.out.println(hyundai.toString());
     }
 }
