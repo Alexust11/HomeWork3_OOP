@@ -1,3 +1,5 @@
+package transport;
+
 public class Car {
     private String brand;
     private String model;
@@ -5,6 +7,7 @@ public class Car {
     private String color;
     private int productionYear;
     private String productionCountry;
+
 
     public Car(String brand, String model, float engineVolume, String color, int productionYear, String productionCountry) {
         if (brand =="") {
