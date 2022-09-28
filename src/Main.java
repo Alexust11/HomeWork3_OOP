@@ -18,18 +18,7 @@ public class Main {
         System.out.println("_________________Задание 2________________________________________________");
         // Задание 2
         Car lada=new Car("Lada","Lada Grande",1.7f,"Желтый",2015,"Россия", "автомат","седан", "a123aа124", 6,"летняя"  );
-        Car.Keys ladaKeys=lada.new Keys("", "есть");
-        lada.setKeys(ladaKeys);
-        Car.Insurance ladaInsurance=lada.new Insurance("2022-01-20", 2023.4f, "123456789");
-
-
-        System.out.println(lada.toStringKey());
-
-        Car audi=new Car("Audi","Audi A8 50 L TDI quattro",3.0f,"Черный",2020,"Германия","механика","универсал", "a183aа122", 9,"зимняя" );
-        Car.Keys audiKeys=lada.new Keys("есть", "нет");
-        audi.setKeys(audiKeys);
-        System.out.println(audi.toStringKey());
-
+        //Car audi=new Car("Audi","Audi A8 50 L TDI quattro",3.0f,"Черный",2020,"Германия");
         //Car bmw=new Car("BMW","",0,"Черный",0,"");
         //Car kia=new Car("Kia","Kia Sportage 4",2.4f,"Красный",2018,"Южная корея");
         //Car hyundai=new Car("Hyundai","Hyundai Avante",1.6f,"Оранжевый",2016,"Южная корея");
