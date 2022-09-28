@@ -1,6 +1,69 @@
 package transport;
 
+import java.util.Calendar;
+
 public class Car {
+    public class Insurance {
+        private Calendar insuranceValidityPeriod; // срок действия страховки
+        private float costInsurance;// стоимость страховки
+        private String insuranceNumber; // номер страховки - 9 знаков
+
+        public Insurance(Calendar insuranceValidityPeriod, float costInsurance, String insuranceNumber) {
+            this.insuranceValidityPeriod = insuranceValidityPeriod;
+            this.costInsurance = costInsurance;
+            this.insuranceNumber = insuranceNumber;
+        }
+
+        public Calendar getInsuranceValidityPeriod() {
+            return insuranceValidityPeriod;
+        }
+
+        public float getCostInsurance() {
+            return costInsurance;
+        }
+
+        public String getInsuranceNumber() {
+            return insuranceNumber;
+        }
+    }
+    public class Keys {
+        private String remoteEngineStart;
+        private String keylessAccess;
+
+        public Keys(String remoteEngineStart, String keylessAccess) {
+            if (remoteEngineStart == null || remoteEngineStart == "") {
+                this.remoteEngineStart = "Данные не установлены";
+            } else {
+
+                this.remoteEngineStart = remoteEngineStart;
+            }
+
+
+            if (keylessAccess == null || keylessAccess == "") {
+                this.keylessAccess = "Данные не установлены";
+            } else {
+                this.keylessAccess = keylessAccess;
+            }
+
+
+        }
+
+        public String getRemoteEngineStart() {
+            return remoteEngineStart;
+        }
+
+        public void setRemoteEngineStart(String remoteEngineStart) {
+            this.remoteEngineStart = remoteEngineStart;
+        }
+
+        public String getKeylessAccess() {
+            return keylessAccess;
+        }
+
+        public void setKeylessAccess(String keylessAccess) {
+            this.keylessAccess = keylessAccess;
+        }
+    }
     private String brand;// марка
     private String model;// модель
     private float engineVolume;// объем двигателя
@@ -12,6 +75,9 @@ public class Car {
     private String regNumber;// рег.номер
     private int numberSeats; // количество мест
     private String tireSeason;//тип резины летняя/зимняя
+    private Keys keys;
+    private Insurance insurance;
+
 
 
 
@@ -170,6 +236,38 @@ public class Car {
         }
         return true;
     }
+
+    public Insurance getInsurance() {
+        return insurance;
+    }
+
+    public void setInsurance(Insurance insurance) {
+        this.insurance = insurance;
+    }
+
+    public Keys getKeys() {
+        return keys;
+    }
+
+    public void setKeys(Keys keys) {
+        this.keys = keys;
+    }
+    public String toStringInsurance() {
+        return "У автомобиля { " +
+                "марки -'" + this.model +'\'' +
+                " Стоимость страховки '" + insurance.costInsurance +'\'' +
+                " Номер страховки -'" + insurance.insuranceNumber +'\'' +
+                '}';
+    }
+
+    public String toStringKey() {
+        return "У автомобиля { " +
+                "марки -'" + this.model +'\'' +
+                " Дистанционный пуск двигателя -'" + keys.getRemoteEngineStart() +'\'' +
+                " Безключевой пуск -'" + keys.getKeylessAccess() +'\'' +
+                '}';
+    }
+
     @Override
         public String toString() {
         return "Автомбиль { " +
